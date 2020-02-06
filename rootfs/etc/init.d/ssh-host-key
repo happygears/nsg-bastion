@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Generate keys and save on home volume to persist
+if [ ! -f /home/etc/ssh/ssh_host_rsa_key ]; then
+  mkdir -p /home/etc/ssh
+  ssh-keygen -t rsa -f /home/etc/ssh/ssh_host_rsa_key -N ""
+fi
+
+# Create symlink from /etc/ssh to host keys
+if [ ! -h /etc/ssh/ssh_host_rsa_key ]; then
+  ln -s /home/etc/ssh/ssh_host_rsa_key* /etc/ssh/
+fi

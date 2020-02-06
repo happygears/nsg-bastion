@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# ensure logs are placed on persistent volume
+if [ ! -h /var/log ]; then
+  echo "- Enabling persistence of logs"
+  [ -d /home/log ] || mv /var/log /home/
+  rm -fr /var/log
+  ln -s /home/log /var/
+fi

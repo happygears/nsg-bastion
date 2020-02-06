@@ -1,0 +1,10 @@
+{ "mrkdwn": true,
+  "username": "${SLACK_USERNAME}",
+  "attachments": [
+    {
+      "fallback": "${PAM_USER} logged to ${HOSTNAME} from ${PAM_RHOST}",
+      "title": "${SLACK_TIMESTAMP}: SSH login on ${HOSTNAME} by ${PAM_USER} from ${PAM_RHOST}",
+      "color": "warning"
+    }
+  ]
+}

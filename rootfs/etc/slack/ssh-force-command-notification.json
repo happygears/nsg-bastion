@@ -1,0 +1,11 @@
+{ "mrkdwn": true,
+  "username": "${SLACK_USERNAME}",
+  "attachments": [
+    {
+      "fallback": "${SSH_USER} logged to ${HOSTNAME} from ${SSH_CLIENT_IP}",
+      "title": "${SLACK_TIMESTAMP}: SSH login on ${HOSTNAME} by ${SSH_USER} from ${SSH_CLIENT_IP}",
+      "text": "```${SSH_ORIGINAL_COMMAND}```",
+      "color": "warning"
+    }
+  ]
+}
