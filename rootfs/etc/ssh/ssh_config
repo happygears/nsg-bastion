@@ -1,5 +1,6 @@
 ForwardAgent yes
-SendEnv AWS_* ARM_* GIT_* DOCKER_* LC_* LANG TF_* TERRAGRUNT_* TZ AIVEN_* TERM_*
+ServerAliveInterval 120
+SendEnv TZ AWS_* ARM_* GIT_* DOCKER_* LC_* LANG TF_* TERRAGRUNT_* TZ AIVEN_* TERM_*
 
 Host operator
     User  nw2
