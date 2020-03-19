@@ -1,0 +1,3 @@
+[submodule "customers/gap/files/admin/netspyglass-shared"]
+	path = customers/gap/files/admin/netspyglass-shared
+	url = git@github.com:happygears/nsg-customers-gap.git
