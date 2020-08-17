@@ -1,0 +1,2 @@
+# only keep last 500 sudo command history
+Defaults  maxseq=500
