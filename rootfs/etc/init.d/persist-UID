@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# ensure correct ownership of home dirs
+cd /home
+for u in *
+do
+  # check if this is valid user home dir
+  if id -u $u >/dev/null 2>&1 ; then
+    # force correct user/group ownership
+    chown -R $u:$u $u
+  fi
+done
