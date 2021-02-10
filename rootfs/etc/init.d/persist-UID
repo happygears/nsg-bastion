@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
+set -eux
 # ensure correct ownership of home dirs
 cd /home
-set -x
 for u in *
 do
   # check if this is valid user home dir
