@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -eux
+set -eu
 # ensure correct ownership of home dirs
 cd /home
 for u in *
