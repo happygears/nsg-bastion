@@ -8,6 +8,6 @@ fi
 #echo "- Enabling SSH TCP Forwarding"
 #sed -i 's!^AllowTcpForwarding.*!AllowTcpForwarding yes!' /etc/ssh/sshd_config
 
-echo "- Emabling passing environment variables"
+echo "- Enabling passing environment variables"
 sed -i 's!^PermitUserEnvironment.*!PermitUserEnvironment yes!' /etc/ssh/sshd_config
 echo "AcceptEnv LANG LC_* AWS_* ARM_* GIT_* DOCKER_* TF_* TERRAGRUNT_* TZ AIVEN_* TERM_*" >>/etc/ssh/sshd_config
